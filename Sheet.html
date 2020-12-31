@@ -1,0 +1,483 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./styling.css">
+    </head>
+    <body>
+        <div class = "charinfo">
+            <div class = "logo">
+                <img src = "https://raw.githubusercontent.com/missing-q/charsheets/master/Jojo's%20Bizarre%20Tabletop/assets/logo.png" width = "50%">
+            </div>
+            <div class = "vertical-flex-section">
+                <!--Character name-->
+                <label>
+                    Character Name
+                    <input name = "attr_character_name">
+                </label>
+                <div class = "divider"></div>
+    
+                <!-- User Stats -->
+                <div class = "grid">
+                    <div class = "statlabel item">Toughness</div>
+                    <div class = "item">
+                        <select name = "attr_toughness_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    <div class = "statlabel item">HP</div>
+                    <!--Calculate HP-->
+                    <div class = "statlabel item">Resilience</div>
+                    <div class = "item">
+                        <input name = "attr_resilience" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{toughness_dice} + @{resilience}'>Resilience</button></div>
+                    
+                    <div class = "statlabel item">Tenacity</div>
+                    <div class = "item">
+                        <input name = "attr_tenacity" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{toughness_dice} + @{tenacity}'>Tenacity</button></div>
+                    
+                    <div class = "statlabel item">Endurance</div>
+                    <div class = "item">
+                        <input name = "attr_endurance" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{toughness_dice} + @{endurance}'>Endurance</button></div>
+                    
+                    <div class = "statlabel item">Brawns</div>
+                    <div class = "item">
+                        <select name = "attr_brawns_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <!--Calculate Carry weight-->
+    
+                    <div class = "statlabel item">Unarmed</div>
+                    <div class = "item">
+                        <input name = "attr_unarmed" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{brawns_dice} + @{unarmed}'>Unarmed</button></div>
+    
+                    <div class = "statlabel item">Close Combat</div>
+                    <div class = "item">
+                        <input name = "attr_closecombat" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{brawns_dice} + @{closecombat}'>Close Combat</button></div>
+    
+                    <div class = "statlabel item">Athletics</div>
+                    <div class = "item">
+                        <input name = "attr_athletics" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{brawns_dice} + @{athletics}'>Athletics</button></div>
+                    </div>
+                    
+                    <div class = "statlabel item">Agility</div>
+                    <div class = "item">
+                        <select name = "attr_agility_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    <!--Calculate Speed-->
+    
+                    <div class = "statlabel item">Acrobatics</div>
+                    <div class = "item">
+                        <input name = "attr_acrobatics" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{agility_dice} + @{acrobatics}'>Acrobatics</button></div>
+                    
+                    <div class = "statlabel item">Sleight of Hand</div>
+                    <div class = "item">
+                        <input name = "attr_sleightofhand" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{agility_dice} + @{sleightofhand}'>Sleight of Hand</button></div>
+    
+                    <div class = "statlabel item">Stealth</div>
+                    <div class = "item">
+                        <input name = "attr_stealth" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{agility_dice} + @{stealth}'>Stealth</button></div>
+                    </div>
+                    
+                    <div class = "statlabel item">Deftness</div>
+                    <div class = "item">
+                        <select name = "attr_deftness_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    <!--TODO: Calculate Quickdraws-->
+                    
+                    <div class = "statlabel item">Marksmanship</div>
+                    <div class = "item">
+                        <input name = "attr_marksmanship" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{deftness_dice} + @{marksmanship}'>Marksmanship</button></div>
+    
+                    <div class = "statlabel item">Demolitions</div>
+                    <div class = "item">
+                        <input name = "attr_demolitions" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{deftness_dice} + @{demolitions}'>Demolitions</button></div>
+    
+                    <div class = "statlabel item">Engineering</div>
+                    <div class = "item">
+                        <input name = "attr_engineering" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{deftness_dice} + @{engineering}'>Engineering</button></div>
+                    </div>
+    
+                    <div class = "statlabel item">Charm</div>
+                    <div class = "item">
+                        <select name = "attr_charm_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    <!--Calculate Favours-->
+    
+                    <div class = "statlabel item">Persuasion</div>
+                    <div class = "item">
+                        <input name = "attr_persuasion" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{charm_dice} + @{persuasion}'>Persuasion</button></div>
+    
+                    <div class = "statlabel item">Intimidation</div>
+                    <div class = "item">
+                        <input name = "attr_intimidation" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{charm_dice} + @{intimidation}'>Intimidation</button></div>
+                    
+                    <div class = "statlabel item">Deception</div>
+                    <div class = "item">
+                        <input name = "attr_deception" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{charm_dice} + @{deception}'>Deception</button></div>
+                    </div>
+                    
+                    <div class = "statlabel item">Intellect</div>
+                    <div class = "item">
+                        <select name = "attr_intellect_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    <!--Calculate Rerolls-->
+    
+                    <div class = "statlabel item">Trivia</div>
+                    <div class = "item">
+                        <input name = "attr_trivia" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{intellect_dice} + @{trivia}'>Trivia</button></div>
+    
+                    <div class = "statlabel item">Science</div>
+                    <div class = "item">
+                        <input name = "attr_science" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{intellect_dice} + @{science}'>Science</button></div>
+    
+                    <div class = "statlabel item">Perception</div>
+                    <div class = "item">
+                        <input name = "attr_perception" type = "number" value = "0">
+                    </div>
+                    <div class = "statlabel item"><button type='roll' value='/roll @{intellect_dice} + @{perception}'>Perception</button></div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Stand Stats and info-->
+            <div class = "vertical-flex-section">
+                <label>
+                    Stand Name <input name = "attr_stand_name" type = "text">
+                </label>
+                <!--Add tooltips of each stand type description using the Title parameter-->
+
+                <div class = "divider"></div>
+
+                <!--Stats-->
+                <div class = "grid grid4">
+                    <div class = "statlabel item">Stat</div>
+                    <div class = "statlabel item">Rank</div>
+                    <div class = "statlabel item">Dice</div>
+                    <div class = "statlabel item">Modifier</div>
+
+                    <!--Power-->
+                    <div class = "item"><button type='roll' value='/roll @{power_dice}'>Power</button></div>
+                    <div class = "item">
+                        <select name = "attr_power_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_power_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_power_mod" value = "+1">+1</span></div>
+
+                    <!--Speed-->
+                    <div class = "item"><button type='roll' value='/roll @{speed_dice}'>Speed</button></div>
+                    <div class = "item">
+                        <select name = "attr_speed_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_speed_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_speed_mod" value = "+1">+1</span></div>
+
+                    <!--Range-->
+                    <div class = "item"><button type='roll' value='/roll @{range_dice}'>Range</button></div>
+                    <div class = "item">
+                        <select name = "attr_range_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_range_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_range_mod" value = "+1">+1</span></div>
+
+                    <!--Durability-->
+                    <div class = "item"><button type='roll' value='/roll @{durability_dice}'>Durability</button></div>
+                    <div class = "item">
+                        <select name = "attr_durability_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_durability_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_durability_mod" value = "+1">+1</span></div>
+
+                    <!--Precision-->
+                    <div class = "item"><button type='roll' value='/roll @{precision_dice}'>Precision</button></div>
+                    <div class = "item">
+                        <select name = "attr_precision_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_precision_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_precision_mod" value = "+1">+1</span></div>
+
+                    <!--Learning-->
+                    <div class = "item"><button type='roll' value='/roll @{learning_dice}'>Learning</button></div>
+                    <div class = "item">
+                        <select name = "attr_learning_val">
+                            <option>S</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option selected>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                        </select>
+                    </div>
+                    <div class = "item"><span name = "attr_learning_dice" value = "2d6">2d6</span></div>
+                    <div class = "item"><span name = "attr_learning_mod" value = "+1">+1</span></div>
+                </div>
+
+                <div class = "divider"></div>
+
+                <!--Stand Abilities-->
+                <div class = "grid grid1"><div class = "item statlabel">Abilities</div></div>
+                <div class = "divider-special"></div>
+                <div class = "grid grid5">
+                    <div class = "ab-name bold item">Name</div>
+                    <div class = "ab-roll bold item ">Roll</div>
+                    <div class = "ab-range bold item">Range</div>
+                    <div class = "ab-effect bold item">Effect</div>
+                    <div class = "ab-condition bold item">Condition</div>
+                </div>
+            </div>
+        </div>
+    
+        <!--Rolltemplate time -->
+        <rolltemplate class="sheet-rolltemplate-jjba">
+        </rolltemplate>
+    
+        <!-- It's time for scripts -->
+        <script type="text/worker">
+            var getSectionIDsOrdered = function(sectionName, callback) {
+                'use strict';
+                getAttrs([`_reporder_${sectionName}`], function (v) {
+                    getSectionIDs(sectionName, function (idArray) {
+                        let reporderArray = v[`_reporder_${sectionName}`] ? v[`_reporder_${sectionName}`].toLowerCase().split(',') : [],
+                            ids = [...new Set(reporderArray.filter(x => idArray.includes(x)).concat(idArray))];
+                        callback(ids);
+                    });
+                });
+            };
+            
+            // Stand mods
+            let rankvals = ["E","D","C","B","A","S"]
+            let dicevals = ["2d6","2d8","2d10","2d12","2d14","2d20"];
+            let modvals = ["-2","0","+2","+4","+6","+12"];
+            on("change:power_val", function(eventInfo) {
+                getAttrs(["power_val","power_dice","power_mod"], function(v) {
+                    let value = v.power_val;
+                    let index = rankvals.indexOf(value);
+                    setAttrs({
+                        power_dice: dicevals[index],
+                        power_mod: modvals[index]
+                    });
+            
+                });
+            });
+            
+            on("change:speed_val", function(eventInfo) {
+                getAttrs(["speed_val","speed_dice","speed_mod"], function(v) {
+                    let value = v.speed_val;
+                    let index = rankvals.indexOf(value);
+                    setAttrs({
+                        speed_dice: dicevals[index],
+                        speed_mod: modvals[index]
+                    });
+                });
+            });
+            
+            on("change:range_val", function(eventInfo) {
+                getAttrs(["range_val","range_dice","range_mod"], function(v) {
+                    let value = v.range_val;
+                    let index = rankvals.indexOf(value);
+                    setAttrs({
+                        range_dice: dicevals[index],
+                        range_mod: modvals[index]
+                    });
+                });
+            });
+            
+            on("change:durability_val", function(eventInfo) {
+                getAttrs(["durability_val","durability_dice","durability_mod"], function(v) {
+                    let value = v.durability_val;
+                    let index = rankvals.indexOf(value);
+                    setAttrs({
+                        durability_dice: dicevals[index],
+                        durability_mod: modvals[index]
+                    });
+                });
+            });
+            
+            on("change:precision_val", function(eventInfo) {
+                getAttrs(["precision_val","precision_dice","precision_mod"], function(v) {
+                    let value = v.precision_val;
+                    let index = rankvals.indexOf(value);
+                    setAttrs({
+                        precision_dice: dicevals[index],
+                        precision_mod: modvals[index]
+                    });
+                });
+            });
+            
+            on("change:learning_val", function(eventInfo) {
+                getAttrs(["learning_val","learning_dice","learning_mod"], function(v) {
+                    let value = v.learning_val;
+                    let index = rankvals.indexOf(value);
+                    setAttrs({
+                        learning_dice: dicevals[index],
+                        learning_mod: modvals[index]
+                    });
+                });
+            });
+            
+            
+            // Character Stats
+            let rankvals2 = ["E","D","C","B","A","S"]
+            let dicevals2 = ["1d6","2d6k1","2d6","3d6k2","3d6","4d6k3"];
+            on("change:toughness_val", function(eventInfo) {
+                getAttrs(["toughness_val","toughness_dice"], function(v) {
+                    let value = v.toughness_val;
+                    let index = rankvals2.indexOf(value);
+                    setAttrs({
+                        toughness_dice: dicevals2[index],
+                    });
+                });
+            });
+            
+            on("change:brawns_val", function(eventInfo) {
+                getAttrs(["brawns_val","brawns_dice"], function(v) {
+                    let value = v.brawns_val;
+                    let index = rankvals2.indexOf(value);
+                    setAttrs({
+                        brawns_dice: dicevals2[index],
+                    });
+                });
+            });
+            
+            on("change:agility_val", function(eventInfo) {
+                getAttrs(["agility_val","agility_dice"], function(v) {
+                    let value = v.agility_val;
+                    let index = rankvals2.indexOf(value);
+                    setAttrs({
+                        agility_dice: dicevals2[index],
+                    });
+                });
+            });
+            
+            on("change:deftness_val", function(eventInfo) {
+                getAttrs(["deftness_val","deftness_dice"], function(v) {
+                    let value = v.deftness_val;
+                    let index = rankvals2.indexOf(value);
+                    setAttrs({
+                        deftness_dice: dicevals2[index],
+                    });
+                });
+            });
+            
+            on("change:charm_val", function(eventInfo) {
+                getAttrs(["charm_val","charm_dice"], function(v) {
+                    let value = v.charm_val;
+                    let index = rankvals2.indexOf(value);
+                    setAttrs({
+                        charm_dice: dicevals2[index],
+                    });
+                });
+            });
+            
+            on("change:intellect_val", function(eventInfo) {
+                getAttrs(["intellect_val","intellect_dice"], function(v) {
+                    let value = v.intellect_val;
+                    let index = rankvals2.indexOf(value);
+                    setAttrs({
+                        intellect_dice: dicevals2[index],
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
