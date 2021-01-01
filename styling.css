@@ -26,28 +26,30 @@ table {
     border-spacing: 5px;
     width: 100%;
     padding: 5px;
-    border: none;
+    border: 5px solid black;
+    border-collapse: collapse;
 }
 th, td {
     text-align: left;
     padding: 10px;
+    border: 1px solid black;
 }
 
 .toughness {
-    background-color: aquamarine;
+    background-color: rgb(164, 255, 225);
 }
 .brawns {
-    background-color: rgb(255, 117, 117);
+    background-color: rgb(253, 156, 156);
 }
 .agility {
-    background-color: plum;
+    background-color: rgb(255, 180, 255);
 }
 .deftness {
-    background-color: orange;
+    background-color: rgb(255, 196, 86);
 }
 .charm {
-    background-color: yellow;
+    background-color: rgb(255, 255, 149);
 }
 .intellect {
-    background-color: rgb(71, 71, 247);
+    background-color: rgb(136, 136, 255);
 }

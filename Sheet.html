@@ -22,7 +22,7 @@
                     <tr>
                         <th class = "toughness">
                             <div class = "statlabel-item">Toughness</div>
-                            <div class = "item">
+                            <div class = "dropdown">
                                 <select name = "attr_toughness_val">
                                     <option>S</option>
                                     <option>A</option>
@@ -31,12 +31,13 @@
                                     <option>D</option>
                                     <option>E</option>
                                 </select>
-                            <div class = "statlabel-item">HP</div>
+                            </div>
+                            <div class = "stat-type-value">Max HP: </div>
                             <!--Calculate HP-->
                         </th>
                         <th class = "brawns">
                             <div class = "statlabel-item">Brawns</div>
-                            <div class = "item">
+                            <div class = "dropdown">
                                 <select name = "attr_brawns_val">
                                     <option>S</option>
                                     <option>A</option>
@@ -46,11 +47,12 @@
                                     <option>E</option>
                                 </select>
                             </div>
+                            <div class = "stat-type-value">Carry Weight: </div>
                             <!--Calculate Carry weight-->
                         </th>
                         <th class = "agility">
                             <div class = "statlabel-item">Agility</div>
-                            <div class = "item">
+                            <div class = "dropdown">
                                 <select name = "attr_agility_val">
                                     <option>S</option>
                                     <option>A</option>
@@ -59,11 +61,13 @@
                                     <option>D</option>
                                     <option>E</option>
                                 </select>
+                            </div>
+                            <div class = "stat-type-value">Range: </div>
                             <!--Calculate Speed-->
                         </th>
                         <th class = "deftness">
                             <div class = "statlabel-item">Deftness</div>
-                            <div class = "item">
+                            <div class = "dropdown">
                                 <select name = "attr_deftness_val">
                                     <option>S</option>
                                     <option>A</option>
@@ -72,11 +76,13 @@
                                     <option>D</option>
                                     <option>E</option>
                                 </select>
+                            </div>
+                            <div class = "stat-type-value">Quickdraws: </div>
                             <!--TODO: Calculate Quickdraws-->
                         </th>
                         <th class = "charm">
                             <div class = "statlabel-item">Charm</div>
-                            <div class = "item">
+                            <div class = "dropdown">
                                 <select name = "attr_charm_val">
                                     <option>S</option>
                                     <option>A</option>
@@ -85,11 +91,13 @@
                                     <option>D</option>
                                     <option>E</option>
                                 </select>
+                            </div>
+                            <div class = "stat-type-value">Favours: </div>
                             <!--Calculate Favours-->
                         </th>
                         <th class = "Intellect">
                             <div class = "statlabel-item">Intellect</div>
-                            <div class = "item">
+                            <div class = "dropdown">
                                 <select name = "attr_intellect_val">
                                     <option>S</option>
                                     <option>A</option>
@@ -98,6 +106,8 @@
                                     <option>D</option>
                                     <option>E</option>
                                 </select>
+                            </div>
+                            <div class = "stat-type-value">Rerolls: </div>
                             <!--Calculate Rerolls-->
                         </th>
                     </tr>
@@ -107,128 +117,137 @@
                             <div class = "item">
                                 <input name = "attr_resilience" type = "number" value = "0">
                             </div>
-                            <div class = "statlabel-item"><button type='roll' value='/roll @{toughness_dice} + @{resilience}'>Resilience</button></div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{toughness_dice} + @{resilience}'>Roll Resilience</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Unarmed</div>
+                            <div class = "item">
+                                <input name = "attr_unarmed" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{brawns_dice} + @{unarmed}'>Roll Unarmed</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Acrobatics</div>
+                            <div class = "item">
+                                <input name = "attr_acrobatics" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{agility_dice} + @{acrobatics}'>Roll Acrobatics</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Marksmanship</div>
+                            <div class = "item">
+                                <input name = "attr_marksmanship" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{deftness_dice} + @{marksmanship}'>Roll Marksmanship</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Persuasion</div>
+                            <div class = "item">
+                                <input name = "attr_persuasion" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{charm_dice} + @{persuasion}'>Roll Persuasion</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Trivia</div>
+                            <div class = "item">
+                                <input name = "attr_trivia" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{intellect_dice} + @{trivia}'>Roll Trivia</button></div>
                         </td>
                     </tr>
-                    
-                    
-                    
-                    <div class = "statlabel-item">Tenacity</div>
-                    <div class = "item">
-                        <input name = "attr_tenacity" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{toughness_dice} + @{tenacity}'>Tenacity</button></div>
-                    
-                    <div class = "statlabel-item">Endurance</div>
-                    <div class = "item">
-                        <input name = "attr_endurance" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{toughness_dice} + @{endurance}'>Endurance</button></div>
-                    
-                    
-    
-                    <div class = "statlabel-item">Unarmed</div>
-                    <div class = "item">
-                        <input name = "attr_unarmed" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{brawns_dice} + @{unarmed}'>Unarmed</button></div>
-    
-                    <div class = "statlabel-item">Close Combat</div>
-                    <div class = "item">
-                        <input name = "attr_closecombat" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{brawns_dice} + @{closecombat}'>Close Combat</button></div>
-    
-                    <div class = "statlabel-item">Athletics</div>
-                    <div class = "item">
-                        <input name = "attr_athletics" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{brawns_dice} + @{athletics}'>Athletics</button></div>
-                    </div>
-                    
-                    
-    
-                    <div class = "statlabel-item">Acrobatics</div>
-                    <div class = "item">
-                        <input name = "attr_acrobatics" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{agility_dice} + @{acrobatics}'>Acrobatics</button></div>
-                    
-                    <div class = "statlabel-item">Sleight of Hand</div>
-                    <div class = "item">
-                        <input name = "attr_sleightofhand" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{agility_dice} + @{sleightofhand}'>Sleight of Hand</button></div>
-    
-                    <div class = "statlabel-item">Stealth</div>
-                    <div class = "item">
-                        <input name = "attr_stealth" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{agility_dice} + @{stealth}'>Stealth</button></div>
-                    </div>
-                    
-                    
-                    
-                    <div class = "statlabel-item">Marksmanship</div>
-                    <div class = "item">
-                        <input name = "attr_marksmanship" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{deftness_dice} + @{marksmanship}'>Marksmanship</button></div>
-    
-                    <div class = "statlabel-item">Demolitions</div>
-                    <div class = "item">
-                        <input name = "attr_demolitions" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{deftness_dice} + @{demolitions}'>Demolitions</button></div>
-    
-                    <div class = "statlabel-item">Engineering</div>
-                    <div class = "item">
-                        <input name = "attr_engineering" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{deftness_dice} + @{engineering}'>Engineering</button></div>
-                    </div>
-    
-                    
-    
-                    <div class = "statlabel-item">Persuasion</div>
-                    <div class = "item">
-                        <input name = "attr_persuasion" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{charm_dice} + @{persuasion}'>Persuasion</button></div>
-    
-                    <div class = "statlabel-item">Intimidation</div>
-                    <div class = "item">
-                        <input name = "attr_intimidation" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{charm_dice} + @{intimidation}'>Intimidation</button></div>
-                    
-                    <div class = "statlabel-item">Deception</div>
-                    <div class = "item">
-                        <input name = "attr_deception" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{charm_dice} + @{deception}'>Deception</button></div>
-                    </div>
-                    
-                    
-    
-                    <div class = "statlabel-item">Trivia</div>
-                    <div class = "item">
-                        <input name = "attr_trivia" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{intellect_dice} + @{trivia}'>Trivia</button></div>
-    
-                    <div class = "statlabel-item">Science</div>
-                    <div class = "item">
-                        <input name = "attr_science" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{intellect_dice} + @{science}'>Science</button></div>
-    
-                    <div class = "statlabel-item">Perception</div>
-                    <div class = "item">
-                        <input name = "attr_perception" type = "number" value = "0">
-                    </div>
-                    <div class = "statlabel-item"><button type='roll' value='/roll @{intellect_dice} + @{perception}'>Perception</button></div>
-                    </div>
+                    <tr>
+                        <td>
+                            <div class = "statlabel-item">Tenacity</div>
+                            <div class = "item">
+                                <input name = "attr_tenacity" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{toughness_dice} + @{tenacity}'>Roll Tenacity</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Close Combat</div>
+                            <div class = "item">
+                                <input name = "attr_closecombat" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{brawns_dice} + @{closecombat}'>Roll Close Combat</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Sleight of Hand</div>
+                            <div class = "item">
+                                <input name = "attr_sleightofhand" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{agility_dice} + @{sleightofhand}'>Roll Sleight of Hand</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Demolitions</div>
+                            <div class = "item">
+                                <input name = "attr_demolitions" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{deftness_dice} + @{demolitions}'>Roll Demolitions</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Intimidation</div>
+                            <div class = "item">
+                                <input name = "attr_intimidation" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{charm_dice} + @{intimidation}'>Roll Intimidation</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Science</div>
+                            <div class = "item">
+                                <input name = "attr_science" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{intellect_dice} + @{science}'>Roll Science</button></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class = "statlabel-item">Endurance</div>
+                            <div class = "item">
+                                <input name = "attr_endurance" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{toughness_dice} + @{endurance}'>Roll Endurance</button></div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Athletics</div>
+                            <div class = "item">
+                                <input name = "attr_athletics" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{brawns_dice} + @{athletics}'>Roll Athletics</button></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Stealth</div>
+                            <div class = "item">
+                                <input name = "attr_stealth" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{agility_dice} + @{stealth}'>Roll Stealth</button></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Engineering</div>
+                            <div class = "item">
+                                <input name = "attr_engineering" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{deftness_dice} + @{engineering}'>Roll Engineering</button></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Deception</div>
+                            <div class = "item">
+                                <input name = "attr_deception" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{charm_dice} + @{deception}'>Roll Deception</button></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class = "statlabel-item">Perception</div>
+                            <div class = "item">
+                                <input name = "attr_perception" type = "number" value = "0">
+                            </div>
+                            <div class = "statlabel-item"><button type='roll' value='/roll @{intellect_dice} + @{perception}'>Roll Perception</button></div>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             </div>
     
