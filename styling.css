@@ -1,12 +1,10 @@
-sheet-body {
+.charsheet {
     background-color: rgb(241, 241, 241);
-}
-
-.sheet-charinfo {
     scroll-behavior: smooth;
     height: 100%;
     font-family: 'Calibri Body', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, monospace;
 }
+
 .sheet-logo {
     text-align: center;
 }
@@ -42,7 +40,7 @@ sheet-body {
     margin: 10px 0px;
 }
 
-sheet-table {
+table {
     text-align: left;
     line-height: 2;
     border-spacing: 5px;
@@ -52,7 +50,7 @@ sheet-table {
     border: 5px solid black;
     border-collapse: collapse;
 }
-sheet-th, sheet-td {
+th, td {
     text-align: left;
     padding: 10px;
     border: 1px solid black;
