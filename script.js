@@ -13,6 +13,8 @@ var getSectionIDsOrdered = function(sectionName, callback) {
 let rankvals = ["E","D","C","B","A","S"]
 let dicevals = ["2d6","2d8","2d10","2d12","2d14","2d20"];
 let modvals = ["-2","0","+2","+4","+6","+12"];
+let speed = ["20", "30", "50", "75", "100"];
+let range = ["10", "25", "50", "100", "200"];
 on("change:power_val", function(eventInfo) {
     getAttrs(["power_val","power_dice","power_mod"], function(v) {
         let value = v.power_val;
@@ -21,7 +23,6 @@ on("change:power_val", function(eventInfo) {
             power_dice: dicevals[index],
             power_mod: modvals[index]
         });
-
     });
 });
 
@@ -33,6 +34,7 @@ on("change:speed_val", function(eventInfo) {
             speed_dice: dicevals[index],
             speed_mod: modvals[index]
         });
+        document.getElementById("stand-speed").innerHTML = "Speed: " + speed[index] + "ft/turn";
     });
 });
 
@@ -44,6 +46,7 @@ on("change:range_val", function(eventInfo) {
             range_dice: dicevals[index],
             range_mod: modvals[index]
         });
+        document.getElementById("stand-range").innerHTML = "Ramge " + range[index] + "ft";
     });
 });
 
@@ -84,6 +87,12 @@ on("change:learning_val", function(eventInfo) {
 // Character Stats
 let rankvals2 = ["E","D","C","B","A","S"]
 let dicevals2 = ["1d6","2d6k1","2d6","3d6k2","3d6","4d6k3"];
+let hpvals = ["10", "15", "20", "25", "30", "35"];
+let carryvals = ["15", "25", "35", "45", "55", "65"];
+let rangevals = ["20", "30", "40", "50", "60", "70"];
+let deftnessvals = ["1", "2", "3", "4", "5", "6"];
+let charmvals = ["1", "2", "3", "4", "5", "6"];
+let intellectvals = ["1", "2", "3", "4", "5", "6"];
 on("change:toughness_val", function(eventInfo) {
     getAttrs(["toughness_val","toughness_dice"], function(v) {
         let value = v.toughness_val;
@@ -91,6 +100,7 @@ on("change:toughness_val", function(eventInfo) {
         setAttrs({
             toughness_dice: dicevals2[index],
         });
+        document.getElementById("user-hp").innerHTML = "Max HP: " + hpvals[index];
     });
 });
 
@@ -101,6 +111,7 @@ on("change:brawns_val", function(eventInfo) {
         setAttrs({
             brawns_dice: dicevals2[index],
         });
+        document.getElementById("user-carry").innerHTML = "Carry Weight: " + carryvals[index] + "kg";
     });
 });
 
@@ -111,6 +122,7 @@ on("change:agility_val", function(eventInfo) {
         setAttrs({
             agility_dice: dicevals2[index],
         });
+        document.getElementById("user-range").innerHTML = "Range " + rangevals[index] + "ft";
     });
 });
 
@@ -121,6 +133,7 @@ on("change:deftness_val", function(eventInfo) {
         setAttrs({
             deftness_dice: dicevals2[index],
         });
+        document.getElementById("user-deftness").innerHTML = "Quickdraws: " + deftnessvals[index];
     });
 });
 
@@ -131,6 +144,7 @@ on("change:charm_val", function(eventInfo) {
         setAttrs({
             charm_dice: dicevals2[index],
         });
+        document.getElementById("user-charm").innerHTML = "Favours: " + charmvals[index];
     });
 });
 
@@ -141,5 +155,6 @@ on("change:intellect_val", function(eventInfo) {
         setAttrs({
             intellect_dice: dicevals2[index],
         });
+        document.getElementById("user-reroll").innerHTML = "Rerolls: " + intellectvals[index];
     });
 });
