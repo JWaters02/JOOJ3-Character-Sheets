@@ -1,24 +1,22 @@
-body {
+.sheet-charinfo {
     background-color: rgb(241, 241, 241);
-}
-
-.charinfo {
     scroll-behavior: smooth;
     height: 100%;
     font-family: 'Calibri Body', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, monospace;
 }
-.logo {
+
+.sheet-logo {
     text-align: center;
 }
 
-.vertical-flex-section {
+.sheet-vertical-flex-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     padding: 20px 65px 20px 15px;
 }
-.vertical-flex-section > div {
+.sheet-vertical-flex-section > div {
     width: 100%;
     margin: 10px;
     text-align: left;
@@ -26,19 +24,19 @@ body {
     padding: 10px 20px 10px 20px;
 }
 
-.horizontal-flex-section {
+.sheet-horizontal-flex-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: left;
 }
-.horizontal-flex-section > div {
+.sheet-horizontal-flex-section > div {
     width: 100%;
     margin: 5px;
     text-align: center;
 }
 
-.header {
+.sheet-header {
     margin: 10px 0px;
 }
 
@@ -58,41 +56,41 @@ th, td {
     border: 1px solid black;
 }
 
-.toughness,
-.power {
+.sheet-toughness,
+.sheet-power {
     background-color: rgb(164, 255, 225);
 }
-.brawns,
-.speed {
+.sheet-brawns,
+.sheet-speed {
     background-color: rgb(253, 156, 156);
 }
-.agility,
-.range {
+.sheet-agility,
+.sheet-range {
     background-color: rgb(255, 180, 255);
 }
-.deftness,
-.durability {
+.sheet-deftness,
+.sheet-durability {
     background-color: rgb(255, 196, 86);
 }
-.charm,
-.precision {
+.sheet-charm,
+.sheet-precision {
     background-color: rgb(255, 255, 149);
 }
-.intellect,
-.learning {
+.sheet-intellect,
+.sheet-learning {
     background-color: rgb(136, 136, 255);
 }
 
-.nud {
+.sheet-nud {
     width: 50%;
     margin: 10px 0px;
 }
 
-.dropdown {
+.sheet-dropdown {
     padding: 6px 0px;
 }
 
-.button {
+.sheet-button {
     border: none;
     padding: 6px 12px;
     text-align: center;
@@ -105,7 +103,7 @@ th, td {
     color: black;
     border: 2px solid #555555;
 }
-.button:hover {
+.sheet-button:hover {
     background-color: #555555;
     color: white;
 }
