@@ -1,6 +1,5 @@
 .sheet-charinfo {
     background-color: rgb(241, 241, 241);
-    scroll-behavior: smooth;
     height: 100%;
     font-family: 'Calibri Body', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, monospace;
 }
@@ -14,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    padding: 20px 65px 20px 15px;
+    padding: 20px 40px 20px 40px;
 }
 .sheet-vertical-flex-section > div {
     width: 100%;
@@ -88,6 +87,11 @@ th, td {
 
 .sheet-dropdown {
     padding: 6px 0px;
+}
+
+select {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sheet-button {

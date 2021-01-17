@@ -90,11 +90,11 @@ on("change:learning_val", function(eventInfo) {
 let rankvals2 = ["E","D","C","B","A","S"]
 let dicevals2 = ["1d6","2d6k1","2d6","3d6k2","3d6","4d6k3"];
 let hpvals = ["HP: 10", "HP: 15", "HP: 20", "HP: 25", "HP: 30", "HP: 35"];
-let carryvals = ["Carry Weight: 15kg", "Carry Weight: 25kg", "Carry Weight: 35kg", "Carry Weight: 45kg", "Carry Weight: 55kg", "Carry Weight: 65kg"];
+let carryvals = ["Capacity: 15kg", "Capacity: 25kg", "Capacity: 35kg", "Capacity: 45kg", "Capacity: 55kg", "Capacity: 65kg"];
 let rangevals = ["Move Speed: 20ft", "Move Speed: 30ft", "Move Speed: 40ft", "Move Speed: 50ft", "Move Speed: 60ft", "Move Speed: 70ft"];
-let deftnessvals = ["Quickdraws: 1", "Quickdraws: 2", "Quickdraws: 3", "Quickdraws: 4", "Quickdraws: 5", "Quickdraws: 6"];
-let charmvals = ["Favours: 1", "Favours: 2", "Favours: 3", "Favours: 4", "Favours: 5", "Favours: 6"];
-let intellectvals = ["Rerolls: 1", "Rerolls: 2", "Rerolls: 3", "Rerolls: 4", "Rerolls: 5", "Rerolls: 6"];
+let deftnessvals = ["1", "2", "3", "4", "5", "6"];
+let charmvals = ["1", "2", "3", "4", "5", "6"];
+let intellectvals = ["1", "2", "3", "4", "5", "6"];
 on("change:toughness_val", function(eventInfo) {
     getAttrs(["toughness_val","toughness_dice","toughness_stat"], function(v) {
         let value = v.toughness_val;
@@ -139,7 +139,7 @@ on("change:deftness_val", function(eventInfo) {
             deftness_dice: dicevals2[index],
             deftness_stat: deftnessvals[index]
         });
-        document.getElementById("user-deftness").innerHTML = "Quickdraws: " + deftnessvals[index];
+        document.getElementById("user-deftness").innerHTML = deftnessvals[index];
     });
 });
 
@@ -151,7 +151,7 @@ on("change:charm_val", function(eventInfo) {
             charm_dice: dicevals2[index],
             charm_stat: charmvals[index]
         });
-        document.getElementById("user-charm").innerHTML = "Favours: " + charmvals[index];
+        document.getElementById("user-charm").innerHTML = charmvals[index];
     });
 });
 
@@ -163,6 +163,6 @@ on("change:intellect_val", function(eventInfo) {
             intellect_dice: dicevals2[index],
             intellect_stat: intellectvals[index]
         });
-        document.getElementById("user-reroll").innerHTML = "Rerolls: " + intellectvals[index];
+        document.getElementById("user-reroll").innerHTML = intellectvals[index];
     });
 });
