@@ -92,6 +92,7 @@ let dicevals2 = ["1d6","2d6k1","2d6","3d6k2","3d6","4d6k3"];
 let hpvals = ["HP: 10", "HP: 15", "HP: 20", "HP: 25", "HP: 30", "HP: 35"];
 let carryvals = ["Capacity: 15kg", "Capacity: 25kg", "Capacity: 35kg", "Capacity: 45kg", "Capacity: 55kg", "Capacity: 65kg"];
 let rangevals = ["Move Speed: 20ft", "Move Speed: 30ft", "Move Speed: 40ft", "Move Speed: 50ft", "Move Speed: 60ft", "Move Speed: 70ft"];
+let agilityvals = ["1", "2", "3", "4", "5", "6"];
 let deftnessvals = ["1", "2", "3", "4", "5", "6"];
 let charmvals = ["1", "2", "3", "4", "5", "6"];
 let intellectvals = ["1", "2", "3", "4", "5", "6"];
@@ -125,7 +126,8 @@ on("change:agility_val", function(eventInfo) {
         let index = rankvals2.indexOf(value);
         setAttrs({
             agility_dice: dicevals2[index],
-            agility_stat: rangevals[index]
+            agility_stat: rangevals[index],
+            agility_vals: agilityvals[index]
         });
         document.getElementById("user-range").innerHTML = "Range " + rangevals[index] + "ft";
     });
@@ -139,7 +141,7 @@ on("change:deftness_val", function(eventInfo) {
             deftness_dice: dicevals2[index],
             deftness_stat: deftnessvals[index]
         });
-        document.getElementById("user-deftness").innerHTML = "Quickdraws: " + deftnessvals[index];
+        document.getElementById("user-deftness").innerHTML = deftnessvals[index];
     });
 });
 
@@ -151,7 +153,7 @@ on("change:charm_val", function(eventInfo) {
             charm_dice: dicevals2[index],
             charm_stat: charmvals[index]
         });
-        document.getElementById("user-charm").innerHTML = "Favours: " + charmvals[index];
+        document.getElementById("user-charm").innerHTML = charmvals[index];
     });
 });
 
@@ -163,6 +165,6 @@ on("change:intellect_val", function(eventInfo) {
             intellect_dice: dicevals2[index],
             intellect_stat: intellectvals[index]
         });
-        document.getElementById("user-reroll").innerHTML = "Rerolls: " + intellectvals[index];
+        document.getElementById("user-reroll").innerHTML = intellectvals[index];
     });
 });
