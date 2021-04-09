@@ -1,6 +1,6 @@
 <div class = "charinfo">
     <div class = "logo">
-        <img src = "https://raw.githubusercontent.com/missing-q/charsheets/master/Jojo's%20Bizarre%20Tabletop/assets/logo.png" width = "20%">
+        <img src = "https://dl.dropboxusercontent.com/s/tcceezwh1fe4m7o/Intro%20Logo.png?dl=0" width = "20%">
     </div>
     <!-- User Stats-->
     <div class = "vertical-flex-section">
@@ -28,6 +28,8 @@
                         </div>
                         <div class = "item"><span name = "attr_toughness_dice" value = "2d6">2d6</span></div>
                         <div class = "item"><span name = "attr_toughness_stat" value = "HP: 15">HP: 15</span></div>
+                        <div class = "statlabel-item">‎</div>
+                        <div class = "statlabel-item">‎</div>
                         <div class = "statlabel-item"><button class = "button" type='roll' value='/roll @{toughness_dice}'>Roll</button></div>
                     </th>
                     <th class = "brawns">
@@ -44,6 +46,8 @@
                         </div>
                         <div class = "item"><span name = "attr_brawns_dice" value = "2d6">2d6</span></div>
                         <div class = "item"><span name = "attr_brawns_stat" value = "Capacity: 15kg">Capacity: 15kg</span></div>
+                        <div class = "statlabel-item">‎</div>
+                        <div class = "statlabel-item">‎</div>
                         <div class = "statlabel-item"><button class = "button" type='roll' value='/roll @{brawns_dice}'>Roll</button></div>
                     </th>
                     <th class = "agility">
@@ -60,6 +64,8 @@
                         </div>
                         <div class = "item"><span name = "attr_agility_dice" value = "2d6">2d6</span></div>
                         <div class = "item"><span name = "attr_agility_stat" value = "Move Speed: 30ft">Move Speed: 30ft</span></div>
+                        <div class = "statlabel-item">‎</div>
+                        <div class = "statlabel-item">‎</div>
                         <div class = "statlabel-item"><button class = "button" type='roll' value='/roll @{agility_dice}'>Roll</button></div>
                     </th>
                     <th class = "deftness">
@@ -204,7 +210,7 @@
                         <div class = "statlabel-item"><button class = "button" type='roll' value='/roll @{charm_dice} + @{intimidation}'>Roll</button></div>
                     </td>
                     <td>
-                        <div class = "statlabel-item">Science</div>
+                        <div class = "statlabel-item">Determination</div>
                         <div class = "item">
                             <input class = "nud" name = "attr_science" type = "number" value = "0">
                         </div>
@@ -241,7 +247,7 @@
                         <div class = "statlabel-item"><button class = "button" type='roll' value='/roll @{deftness_dice} + @{engineering}'>Roll</button></div>
                     </td>
                     <td>
-                        <div class = "statlabel-item">Deception</div>
+                        <div class = "statlabel-item">Performance</div>
                         <div class = "item">
                             <input class = "nud" name = "attr_deception" type = "number" value = "0">
                         </div>
@@ -541,7 +547,7 @@
                 deftness_dice: dicevals2[index],
                 deftness_stat: deftnessvals[index]
             });
-            document.getElementById("user-deftness").innerHTML = deftnessvals[index];
+            document.getElementById("user-deftness").innerHTML = "Quickdraws: " + deftnessvals[index];
         });
     });
     
@@ -553,7 +559,7 @@
                 charm_dice: dicevals2[index],
                 charm_stat: charmvals[index]
             });
-            document.getElementById("user-charm").innerHTML = charmvals[index];
+            document.getElementById("user-charm").innerHTML = "Favours: " + charmvals[index];
         });
     });
     
@@ -565,7 +571,7 @@
                 intellect_dice: dicevals2[index],
                 intellect_stat: intellectvals[index]
             });
-            document.getElementById("user-reroll").innerHTML = intellectvals[index];
+            document.getElementById("user-reroll").innerHTML = "Rerolls: " + intellectvals[index];
         });
     });
 </script>

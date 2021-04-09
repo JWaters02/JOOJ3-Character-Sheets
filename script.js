@@ -139,7 +139,7 @@ on("change:deftness_val", function(eventInfo) {
             deftness_dice: dicevals2[index],
             deftness_stat: deftnessvals[index]
         });
-        document.getElementById("user-deftness").innerHTML = deftnessvals[index];
+        document.getElementById("user-deftness").innerHTML = "Quickdraws: " + deftnessvals[index];
     });
 });
 
@@ -151,7 +151,7 @@ on("change:charm_val", function(eventInfo) {
             charm_dice: dicevals2[index],
             charm_stat: charmvals[index]
         });
-        document.getElementById("user-charm").innerHTML = charmvals[index];
+        document.getElementById("user-charm").innerHTML = "Favours: " + charmvals[index];
     });
 });
 
@@ -163,6 +163,6 @@ on("change:intellect_val", function(eventInfo) {
             intellect_dice: dicevals2[index],
             intellect_stat: intellectvals[index]
         });
-        document.getElementById("user-reroll").innerHTML = intellectvals[index];
+        document.getElementById("user-reroll").innerHTML = "Rerolls: " + intellectvals[index];
     });
 });
